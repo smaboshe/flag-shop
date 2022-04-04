@@ -12,11 +12,11 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_04_04_075122) do
   create_table "flags", force: :cascade do |t|
-    t.string "image_url"
+    t.decimal "price"
     t.string "country"
     t.string "country_code"
-    t.decimal "price"
     t.string "currency_code"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

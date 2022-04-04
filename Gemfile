@@ -54,6 +54,9 @@ group :development, :test do
 
   # Ref: https://github.com/rspec/rspec-rails#installation
   gem 'rspec-rails'
+
+  # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
+  gem 'shoulda-matchers'
 end
 
 group :development do

@@ -17,6 +17,20 @@ To start, a flag has a:
 - Price (in Kwacha)
 - A link to an image of the flag
 
+## Todo
+
+- [x] Validate the presence of `price`
+- [x] Validate the presence of `country`
+- [x] Validate the presence of `country_code`
+- [x] Validate the presence of `currency_code`
+- [x] Validate the presence of `image_url`
+
+- [x] Validate that `price` is a number
+
+- [x] Validate that the `country_code` is 3 characters long (ISO 3166-1 alpha-3 codes are three-letter country codes - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+
+- [ ] Validate that `image_url` looks like a URL
+
 ---
 
 # README

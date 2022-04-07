@@ -12,4 +12,7 @@ class Flag < ApplicationRecord
   validates :currency_code, presence: true
   validates :image_url, presence: true
   validates :price, presence: true
+
+  # URL
+  validates :image_url, url: true
 end

@@ -14,5 +14,8 @@ RSpec.describe Flag, type: :model do
     it { should validate_presence_of(:currency_code) }
     it { should validate_presence_of(:image_url) }
     it { should validate_presence_of(:price) }
+
+    # URL
+    it { is_expected.to validate_url_of(:image_url) }
   end
 end

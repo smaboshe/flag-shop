@@ -9,6 +9,9 @@ require 'rspec/rails'
 # Ref: https://medium.com/@lukepierotti/setting-up-rspec-and-factory-bot-3bb2153fb909
 require 'support/factory_bot'
 
+# Ref: https://github.com/perfectline/validates_url#with-rspec
+require 'validate_url/rspec_matcher'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

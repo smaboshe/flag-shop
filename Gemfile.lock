@@ -209,7 +209,7 @@ GEM
     rspec-support (3.11.0)
     rspec_junit_formatter (0.5.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rubocop (1.27.0)
+    rubocop (1.26.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -220,6 +220,9 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.17.0)
       parser (>= 3.1.1.0)
+    rubocop-performance (1.13.3)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.1.0)
@@ -235,6 +238,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    standard (1.9.1)
+      rubocop (= 1.26.1)
+      rubocop-performance (= 1.13.3)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
@@ -283,10 +289,10 @@ DEPENDENCIES
   rails (~> 7.0.2, >= 7.0.2.3)
   rspec-rails
   rspec_junit_formatter
-  rubocop
   selenium-webdriver
   shoulda-matchers
   sprockets-rails
+  standard
   stimulus-rails
   turbo-rails
   tzinfo-data

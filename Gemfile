@@ -10,12 +10,11 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-#gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
 
 # Use PostgreSQL instead of SQLite
 # Ref: https://dev.to/dauncy/transitioning-from-sqlite-to-postgres-in-rails-56on
-gem 'pg'
-
+gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -42,7 +41,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -56,26 +55,29 @@ gem "bootsnap", require: false
 # Ref: https://github.com/perfectline/validates_url
 gem "validate_url"
 
-gem 'rubocop'
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
 
   # Ref: https://github.com/thoughtbot/factory_bot_rails#configuration
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
 
   # Ref: https://github.com/rspec/rspec-rails#installation
-  gem 'rspec-rails'
+  gem "rspec-rails"
 
   # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
-  gem 'shoulda-matchers'
+  gem "shoulda-matchers"
 
   # Ref: https://github.com/bkeepers/dotenv#rails
-  gem 'dotenv-rails' #, groups: [:development, :test]
+  gem "dotenv-rails" # , groups: [:development, :test]
 
   # CircleCI dependency
-  gem 'rspec_junit_formatter'
+  gem "rspec_junit_formatter"
+
+  # Use Standard instead of rubocop
+  # Ref: https://github.com/testdouble/standard
+  # gem 'rubocop'
+  gem "standard" # , group: [:development, :test]
 end
 
 group :development do

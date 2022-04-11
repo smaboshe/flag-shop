@@ -15,4 +15,9 @@ class Flag < ApplicationRecord
 
   # URL
   validates :image_url, url: true
+
+  # Uniqueness
+  validates :country_code, uniqueness: true
+  validates :country, uniqueness: true
+  validates :image_url, uniqueness: true
 end

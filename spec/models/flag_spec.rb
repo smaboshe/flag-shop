@@ -17,5 +17,10 @@ RSpec.describe Flag, type: :model do
 
     # URL
     it { is_expected.to validate_url_of(:image_url) }
+
+    # Uniqueness
+    it { should validate_uniqueness_of(:country_code) }
+    it { should validate_uniqueness_of(:country) }
+    it { should validate_uniqueness_of(:image_url) }
   end
 end

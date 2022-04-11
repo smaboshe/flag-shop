@@ -3,4 +3,8 @@
 
 require_relative "config/application"
 
+# Use Standard with Rake
+# Ref: https://github.com/testdouble/standard#using-with-rake
+require "standard/rake"
+
 Rails.application.load_tasks

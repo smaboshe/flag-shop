@@ -17,6 +17,13 @@ To start, a flag has a:
 - Price (in Kwacha)
 - A link to an image of the flag
 
+
+Other things to consider:
+
+- Each country can only have one flag
+- Each country can only have one country code
+- Each image_url can only belong to one country
+
 ## Todo
 
 - [x] Validate the presence of `price`
@@ -30,6 +37,10 @@ To start, a flag has a:
 - [x] Validate that the `country_code` is 3 characters long (ISO 3166-1 alpha-3 codes are three-letter country codes - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 
 - [x] Validate that `image_url` looks like a URL
+
+- [x] Validate that `country` is unique
+- [x] Validate that `image_url` is unique
+- [x] Validate that `image_url` is unique
 
 ---
 
@@ -57,5 +68,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
----

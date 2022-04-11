@@ -1,6 +1,6 @@
 class Flag < ApplicationRecord
   # Length
-  validates :country_code, length: { is: 3 }
+  validates :country_code, length: {is: 3}
 
   # Number
   validates :price, numericality: true

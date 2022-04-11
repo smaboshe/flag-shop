@@ -1,16 +1,16 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
+require "spec_helper"
+ENV["RAILS_ENV"] ||= "test"
+require_relative "../config/environment"
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
+require "rspec/rails"
 
 # Ref: https://medium.com/@lukepierotti/setting-up-rspec-and-factory-bot-3bb2153fb909
-require 'support/factory_bot'
+require "support/factory_bot"
 
 # Ref: https://github.com/perfectline/validates_url#with-rspec
-require 'validate_url/rspec_matcher'
+require "validate_url/rspec_matcher"
 
 # Add additional requires below this line. Rails is not loaded until this point!
 

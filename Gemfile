@@ -69,8 +69,11 @@ group :development, :test do
   # Ref: https://github.com/thoughtbot/shoulda-matchers#getting-started
   gem 'shoulda-matchers'
 
-# Ref: https://github.com/bkeepers/dotenv#rails
+  # Ref: https://github.com/bkeepers/dotenv#rails
   gem 'dotenv-rails' #, groups: [:development, :test]
+
+  # CircleCI dependency
+  gem 'rspec_junit_formatter'
 end
 
 group :development do

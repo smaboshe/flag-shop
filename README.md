@@ -38,7 +38,7 @@ Other things to consider:
 - [x] Validate that `image_url` is unique
 - [x] Validate that `image_url` is unique
 - [x] Add a homepage
-- [ ] Add Tailwind to the project
+- [x] Add Tailwind to the project
 
 ---
 

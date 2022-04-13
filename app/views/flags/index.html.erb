@@ -1,2 +1,15 @@
-<h1>Flags#index</h1>
-<p>Find me in app/views/flags/index.html.erb</p>
+<h1>Flag Shop</h1>
+
+<hr />
+
+<% @flags.each do |flag| %>
+  <div class="flag">
+    <h2><%= flag.country %></h2>
+    <img src="<%= flag.image_url %>" /><br />
+    <%= number_to_currency(flag.price, locale: :zmw) %>
+  </div>
+<% end %>
+
+<hr />
+
+<p>Image credits <a href="https://www.worldometers.info" target="_blank">worldometer</a>.</p>

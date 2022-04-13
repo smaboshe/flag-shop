@@ -38,6 +38,7 @@ Other things to consider:
 - [x] Validate that `image_url` is unique
 - [x] Validate that `image_url` is unique
 - [x] Add a homepage
+- [x] Add SimpleCSS to the project
 - [ ] Add Tailwind to the project
 
 ---

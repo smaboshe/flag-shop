@@ -2,12 +2,16 @@
 
 <hr />
 
-<% @flags.each do |flag| %>
-  <div class="flag">
-    <h2><%= flag.country %></h2>
-    <img src="<%= flag.image_url %>" /><br />
-    <%= number_to_currency(flag.price, locale: :zmw) %>
-  </div>
+<% if @flags.blank? %>
+  <p>No flags available</p>
+<% else %>
+  <% @flags.each do |flag| %>
+    <div class="flag">
+      <h2><%= flag.country %></h2>
+      <img src="<%= flag.image_url %>" /><br />
+      <%= number_to_currency(flag.price, locale: :zmw) %>
+    </div>
+  <% end %>
 <% end %>
 
 <hr />

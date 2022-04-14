@@ -1,16 +1,28 @@
 require "rails_helper"
 
-RSpec.describe "Home features" do
+RSpec.describe "Home features:" do
   it "display the title" do
     visit "/"
     expect(page).to have_content("Flag Shop")
   end
 
-  it "display the flag" do
-    flag = create(:flag, country: "Montera", country_code: "mmm", price: 750, currency_code: "ZMW", image_url: "https://www.montenera.org/english/assets/images/vlag-montenera-nieuw-160x107.jpg")
+  context "when there are no flags in the database" do
+    it "display a 'no flag' notifcation" do
+      visit "/"
+      expect(page).to have_content("No flags available")
+    end
+  end
 
-    visit "/"
-    expect(page).to have_content(flag.country)
-    expect(page).to have_content(flag.price)
+  context "when there are flags in the database" do
+    it "display the flags" do
+      first_flag = create(:flag, country: "Montera", country_code: "cc1", price: 750, currency_code: "ZMW", image_url: "https://fake-flag-1.gif")
+      second_flag = create(:flag, country: "Montera2", country_code: "cc2", price: 750, currency_code: "ZMW", image_url: "https://fake-flag-2.gif")
+
+      visit "/"
+      expect(page).to have_content(first_flag.country)
+      expect(page).to have_content(first_flag.price)
+      expect(page).to have_content(second_flag.country)
+      expect(page).to have_content(second_flag.price)
+    end
   end
 end

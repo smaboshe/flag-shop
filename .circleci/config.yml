@@ -3,6 +3,19 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.0
   node: circleci/node@2
+  heroku: circleci/heroku@1.0.1 # Use the Heroku orb in your config
+
+# Ref: https://medium.com/@allanmongej/setting-up-ci-cd-to-a-rails-6-api-with-circleci-and-heroku-c00064f31d57
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+          requires:
+            - build # only run deploy-via-git job if the build job has completed
+          filters:
+            branches:
+              only: main # only run deploy-via-git job on main branch
 
 jobs:
   build:

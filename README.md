@@ -39,11 +39,11 @@ Other things to consider:
 - [x] Validate that `image_url` is unique
 - [x] Add a homepage
 - [x] Add SimpleCSS to the project
-- [ ] Test that if a flag exists, it is displayed on the homepage
+- [x] Test that if a flag exists, it is displayed on the homepage
 - [ ] Integrate payments to the project
 - [ ] Add an admin dashboard to the project
 - [ ] Implement feature flags to the project
-- [ ] Deploy to Heroku on push to main
+- [x] Deploy to Heroku on push to main
 - [x] Update to Ruby 3.1.2
 
 ---

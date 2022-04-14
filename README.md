@@ -44,6 +44,7 @@ Other things to consider:
 - [ ] Add an admin dashboard to the project
 - [ ] Implement feature flags to the project
 - [ ] Deploy to Heroku on push to main
+- [x] Update to Ruby 3.1.2
 
 ---
 

@@ -5,8 +5,7 @@ orbs:
   node: circleci/node@2
   heroku: circleci/heroku@1.0.1 # Use the Heroku orb in your config
 
-# Ref: https://medium.com/@allanmongej/setting-up-ci-cd-to-a-rails-6-api-with-circleci-and-heroku-c00064f31d57
-workflows:
+workflows: # Ref: https://medium.com/@allanmongej/setting-up-ci-cd-to-a-rails-6-api-with-circleci-and-heroku-c00064f31d57
   heroku_deploy:
     jobs:
       - build

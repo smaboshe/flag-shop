@@ -6,6 +6,9 @@ require_relative "../config/environment"
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require "rspec/rails"
 
+# Ref: https://youtu.be/nsj7nBslgnk
+require "capybara/rspec"
+
 # Ref: https://medium.com/@lukepierotti/setting-up-rspec-and-factory-bot-3bb2153fb909
 require "support/factory_bot"
 

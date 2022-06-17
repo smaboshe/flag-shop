@@ -72,7 +72,7 @@ group :development, :test do
   gem "dotenv-rails" # , groups: [:development, :test]
 
   # CircleCI dependency
-  gem "rspec_junit_formatter"
+  gem "rspec_junit_formatter", require: false # Ref: https://github.com/rspec/rspec-rails/issues/1645#issuecomment-815679819
 
   # Use Standard instead of rubocop
   # Ref: https://github.com/testdouble/standard

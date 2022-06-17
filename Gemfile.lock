@@ -100,6 +100,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    flutterwave_sdk (0.1.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -285,6 +286,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   factory_bot_rails
+  flutterwave_sdk
   importmap-rails
   jbuilder
   pg

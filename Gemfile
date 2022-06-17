@@ -99,4 +99,5 @@ group :test do
 end
 
 gem "flutterwave_sdk"
+gem "httparty"
 gem "stripe"

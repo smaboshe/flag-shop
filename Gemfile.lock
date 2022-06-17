@@ -103,6 +103,9 @@ GEM
     flutterwave_sdk (0.1.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    httparty (0.20.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.0)
@@ -122,10 +125,14 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     mini_portile2 (2.8.0)
     minitest (5.16.0)
     msgpack (1.5.2)
+    multi_xml (0.6.0)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -288,6 +295,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   flutterwave_sdk
+  httparty
   importmap-rails
   jbuilder
   pg
@@ -311,4 +319,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.15
+   2.3.16

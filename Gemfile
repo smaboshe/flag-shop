@@ -98,6 +98,7 @@ group :test do
   gem "webdrivers"
 end
 
+gem "flipper"
 gem "flutterwave_sdk"
 gem "httparty"
 gem "stripe"

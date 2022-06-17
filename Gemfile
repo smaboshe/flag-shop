@@ -101,4 +101,5 @@ end
 gem "flipper"
 gem "flutterwave_sdk"
 gem "httparty"
+gem "square.rb"
 gem "stripe"

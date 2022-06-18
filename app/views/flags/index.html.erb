@@ -1,19 +1,20 @@
-<h1>Flag Shop</h1>
+<h1><%= t("application_name") %></h1>
 
-<hr />
+<hr>
 
 <% if @flags.blank? %>
-  <p>No flags available</p>
+  <p><%= t("flags.index.no_flags_available") %></p>
 <% else %>
   <% @flags.each do |flag| %>
     <div class="flag">
       <h2><%= flag.country %></h2>
-      <img src="<%= flag.image_url %>" /><br />
+      <img src="<%= flag.image_url %>"><br>
       <%= number_to_currency(flag.price, locale: :zmw) %>
+      <div><%= button_tag "#{t("flags.index.buy_a_flag_of")} #{flag.country}", type: :button %></div>
     </div>
   <% end %>
 <% end %>
 
-<hr />
+<hr>
 
-<p>Images courtesy of <a href="https://www.worldometers.info" target="_blank">worldometer</a>.</p>
+<p><%= t("flags.index.images_courtesy_of") %><a href="https://www.worldometers.info" target="_blank"><%= t("flags.index.worldometer") %></a>.</p>

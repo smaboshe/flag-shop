@@ -74,10 +74,15 @@ group :development, :test do
   # CircleCI dependency
   gem "rspec_junit_formatter", require: false # Ref: https://github.com/rspec/rspec-rails/issues/1645#issuecomment-815679819
 
-  # Use Standard instead of rubocop
+  # Use Rubocop for ERB linting
+  # gem "rubocop"
+
+  # Use Standard for Ruby linting
   # Ref: https://github.com/testdouble/standard
-  # gem 'rubocop'
   gem "standard" # , group: [:development, :test]
+
+  # https://github.com/Shopify/erb-lint#installation
+  gem "erb_lint", require: false
 end
 
 group :development do

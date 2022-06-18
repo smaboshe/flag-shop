@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application_name: "Flag Shop"
+  flags:
+    index:
+      buy_a_flag_of: Buy a flag of
+      no_flags_available: No flags available
+      images_courtesy_of: Images courtesy of
+      worldometer: Worldometers

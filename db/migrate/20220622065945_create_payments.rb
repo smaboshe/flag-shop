@@ -3,7 +3,8 @@ class CreatePayments < ActiveRecord::Migration[7.0]
     create_table :payments do |t|
       t.decimal :amount
       t.string :card_cvv
-      t.string :card_expiry
+      t.string :card_expiry_month
+      t.string :card_expiry_year
       t.string :card_name
       t.string :card_number
       t.string :currency

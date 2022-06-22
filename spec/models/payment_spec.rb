@@ -5,7 +5,8 @@ RSpec.describe Payment, type: :model do
     it { should validate_numericality_of(:amount) }
 
     it { should validate_presence_of(:amount) }
-    it { should validate_presence_of(:card_expiry) }
+    it { should validate_presence_of(:card_expiry_month) }
+    it { should validate_presence_of(:card_expiry_year) }
     it { should validate_presence_of(:card_name) }
     it { should validate_presence_of(:card_number) }
     it { should validate_presence_of(:currency) }

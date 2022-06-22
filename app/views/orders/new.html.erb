@@ -54,13 +54,20 @@
     </div>
 
     <div>
-      <%= field.label :card_expiry %><br />
-      <%= field.text_field :card_expiry %>
-      <% @payment.errors.full_messages_for(:card_expiry).each do |message| %>
+      <%= field.label :card_expiry_month %><br />
+      <%= field.text_field :card_expiry_month %>
+      <% @payment.errors.full_messages_for(:card_expiry_month).each do |message| %>
         <div><%= message %></div>
       <% end %>
     </div>
 
+    <div>
+      <%= field.label :card_expiry_year %><br />
+      <%= field.text_field :card_expiry_year %>
+      <% @payment.errors.full_messages_for(:card_expiry_year).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
     <div>
       <%= field.label :card_cvv, "Card CVV" %><br />
       <%= field.text_field :card_cvv %>

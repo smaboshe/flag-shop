@@ -14,7 +14,8 @@ describe "Ordering a flag using Flutterwave" do
         fill_in "Shipping address", with: "123 Mwaiseni Avenue, Lusaka, Zambia, 10101"
         fill_in "Card name", with: "Test Customer"
         fill_in "Card number", with: "5531886652142950"
-        fill_in "Card expiry", with: "09/32"
+        fill_in "Card expiry month", with: "09"
+        fill_in "Card expiry year", with: "32"
         fill_in "Card CVV", with: "3310"
         click_button "Order now"
 

@@ -36,7 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_065945) do
   create_table "payments", force: :cascade do |t|
     t.decimal "amount"
     t.string "card_cvv"
-    t.string "card_expiry"
+    t.string "card_expiry_month"
+    t.string "card_expiry_year"
     t.string "card_name"
     t.string "card_number"
     t.string "currency"

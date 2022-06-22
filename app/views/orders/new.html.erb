@@ -1,0 +1,76 @@
+<h1><%= t("orders.new.title") %></h1>
+
+<%= form_with model: @order do |form| %>
+  <h2><%= t("orders.form.enter_your_shipping_information") %></h2>
+  <div>
+    <%= form.label :name %><br />
+    <%= form.text_field :name %>
+    <% @order.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br />
+    <%= form.text_field :email %>
+    <% @order.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :phone %><br />
+    <%= form.text_field :phone %>
+    <% @order.errors.full_messages_for(:phone).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :shipping_address %><br />
+    <%= form.text_area :shipping_address %>
+    <% @order.errors.full_messages_for(:shipping_address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <%= fields_for @payment do |field| %>
+    <h2><%= t("payments.form.enter_your_payment_information") %></h2>
+
+    <div>
+      <%= field.label :card_name %><br />
+      <%= field.text_field :card_name %>
+      <% @payment.errors.full_messages_for(:card_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= field.label :card_number %><br />
+      <%= field.text_field :card_number %>
+      <% @payment.errors.full_messages_for(:card_number).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= field.label :card_expiry %><br />
+      <%= field.text_field :card_expiry %>
+      <% @payment.errors.full_messages_for(:card_expiry).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= field.label :card_cvv, "Card CVV" %><br />
+      <%= field.text_field :card_cvv %>
+      <% @payment.errors.full_messages_for(:card_cvv).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit "Order now" %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_04_075122) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_22_065945) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,4 +24,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_04_075122) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.string "email"
+    t.string "name"
+    t.string "phone"
+    t.text "shipping_address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.decimal "amount"
+    t.string "card_cvv"
+    t.string "card_expiry"
+    t.string "card_name"
+    t.string "card_number"
+    t.string "currency"
+    t.string "medium"
+    t.string "processor"
+    t.string "status"
+    t.bigint "order_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_payments_on_order_id"
+  end
+
+  add_foreign_key "payments", "orders"
 end

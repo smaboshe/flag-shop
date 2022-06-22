@@ -3,13 +3,13 @@ require "rails_helper"
 RSpec.describe "Home features:" do
   it "display the title" do
     visit "/"
-    expect(page).to have_content("Flag Shop")
+    expect(page).to have_content(I18n.t("application.name"))
   end
 
   context "when there are no flags in the database" do
     it "display a 'no flag' notifcation" do
       visit "/"
-      expect(page).to have_content("No flags available")
+      expect(page).to have_content(I18n.t("flags.index.no_flags_available"))
     end
   end
 

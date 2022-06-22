@@ -1,4 +1,4 @@
-<h1><%= t("application_name") %></h1>
+<h1><%= t("application.name") %></h1>
 
 <hr>
 
@@ -9,8 +9,9 @@
     <div class="flag">
       <h2><%= flag.country %></h2>
       <img src="<%= flag.image_url %>"><br>
+      <%= link_to "#{t("flags.index.buy_a_flag_of")} #{flag.country}", new_order_path %>
+      <%= t("flags.index.at") %>
       <%= number_to_currency(flag.price, locale: :zmw) %>
-      <div><%= button_tag "#{t("flags.index.buy_a_flag_of")} #{flag.country}", type: :button %></div>
     </div>
   <% end %>
 <% end %>

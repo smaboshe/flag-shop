@@ -83,6 +83,9 @@ group :development, :test do
 
   # https://github.com/Shopify/erb-lint#installation
   gem "erb_lint", require: false
+
+  # https://github.com/pry/pry-rails#installation
+  gem "pry-rails"
 end
 
 group :development do

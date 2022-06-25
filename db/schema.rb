@@ -29,8 +29,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_065945) do
     t.string "name"
     t.string "phone"
     t.text "shipping_address"
+    t.bigint "flag_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["flag_id"], name: "index_orders_on_flag_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -50,5 +52,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_22_065945) do
     t.index ["order_id"], name: "index_payments_on_order_id"
   end
 
+  add_foreign_key "orders", "flags"
   add_foreign_key "payments", "orders"
 end

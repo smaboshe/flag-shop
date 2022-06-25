@@ -1,83 +1,69 @@
 <h1><%= t("orders.new.title") %></h1>
 
-<%= form_with model: @order do |form| %>
+<%= form_for @order do |order_form| %>
   <h2><%= t("orders.form.enter_your_shipping_information") %></h2>
   <div>
-    <%= form.label :name %><br />
-    <%= form.text_field :name %>
+    <%= order_form.label :name %><br />
+    <%= order_form.text_field :name %>
     <% @order.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :email %><br />
-    <%= form.text_field :email %>
+    <%= order_form.label :email %><br />
+    <%= order_form.text_field :email %>
     <% @order.errors.full_messages_for(:email).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :phone %><br />
-    <%= form.text_field :phone %>
+    <%= order_form.label :phone %><br />
+    <%= order_form.text_field :phone %>
     <% @order.errors.full_messages_for(:phone).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :shipping_address %><br />
-    <%= form.text_area :shipping_address %>
+    <%= order_form.label :shipping_address %><br />
+    <%= order_form.text_area :shipping_address %>
     <% @order.errors.full_messages_for(:shipping_address).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <%= fields_for @payment do |field| %>
+  <%= order_form.fields_for :payments do |payment_fields| %>
     <h2><%= t("payments.form.enter_your_payment_information") %></h2>
 
     <div>
-      <%= field.label :card_name %><br />
-      <%= field.text_field :card_name %>
-      <% @payment.errors.full_messages_for(:card_name).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      <%= payment_fields.label :card_name %><br />
+      <%= payment_fields.text_field :card_name %>
     </div>
 
     <div>
-      <%= field.label :card_number %><br />
-      <%= field.text_field :card_number %>
-      <% @payment.errors.full_messages_for(:card_number).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      <%= payment_fields.label :card_number %><br />
+      <%= payment_fields.text_field :card_number %>
     </div>
 
     <div>
-      <%= field.label :card_expiry_month %><br />
-      <%= field.text_field :card_expiry_month %>
-      <% @payment.errors.full_messages_for(:card_expiry_month).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      <%= payment_fields.label :card_expiry_month %><br />
+      <%= payment_fields.text_field :card_expiry_month %>
     </div>
 
     <div>
-      <%= field.label :card_expiry_year %><br />
-      <%= field.text_field :card_expiry_year %>
-      <% @payment.errors.full_messages_for(:card_expiry_year).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      <%= payment_fields.label :card_expiry_year %><br />
+      <%= payment_fields.text_field :card_expiry_year %>
     </div>
+
     <div>
-      <%= field.label :card_cvv, "Card CVV" %><br />
-      <%= field.text_field :card_cvv %>
-      <% @payment.errors.full_messages_for(:card_cvv).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+      <%= payment_fields.label :card_cvv, "Card CVV" %><br />
+      <%= payment_fields.text_field :card_cvv %>
     </div>
   <% end %>
 
   <div>
-    <%= form.submit "Order now" %>
+    <%= order_form.submit "Order now" %>
   </div>
 <% end %>

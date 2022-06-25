@@ -4,13 +4,23 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @payment = @order.payments.build
+    @order.payments.build
   end
 
   def create
-    order = Order.create(order_params)
+    @order = Order.create(order_params)
+    payment = @order.payments.last
+    payment.currency = "NGN"
+    payment.amount = "10"
+    payment.medium = "card"
+    payment.processor = "flutterwave"
+    payment.status = "pending"
+    @order.flag = Flag.last
+
+    @order.process_payment(payment)
+
     flash[:notice] = "Successfully bought a flag of Zambia"
-    redirect_to order
+    redirect_to @order
   end
 
   def show
@@ -20,14 +30,15 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(
-      :name,
       :email,
+      :name,
       :phone,
       :shipping_address,
-      payment_attributes: [
+      payments_attributes: [
         :card_name,
         :card_number,
-        :card_expiry,
+        :card_expiry_month,
+        :card_expiry_year,
         :card_cvv
       ]
     )

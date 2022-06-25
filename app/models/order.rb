@@ -10,6 +10,18 @@ class Order < ApplicationRecord
   validates :shipping_address, presence: true
 
   def process_payment(payment)
+    if Flipper.enabled?(:process_payment_with_square)
+      process_payment_with_square(payment)
+    elsif Flipper.enabled?(:process_payment_with_stripe)
+      process_payment_with_stripe(payment)
+    else
+      process_payment_with_flutterwave(payment)
+    end
+  end
+
+  private
+
+  def process_payment_with_flutterwave(payment)
     payment_proccessor = Flutterwave.new
     payload = {
       "card_number" => payment.card_number,
@@ -34,5 +46,11 @@ class Order < ApplicationRecord
     Rails.logger.info payment_proccessor
     Rails.logger.info payload
     Rails.logger.info response
+  end
+
+  def process_payment_with_stripe(payment)
+  end
+
+  def process_payment_with_square(payment)
   end
 end

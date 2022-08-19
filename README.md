@@ -31,7 +31,7 @@ Other things to consider:
 - [ ] Validate the presence of `currency_code`
 - [ ] Validate the presence of `image_url`
 - [ ] Validate that `price` is a number
-- [ ] Validate that the `country_code` is 3 characters long (ISO 3166-1 alpha-3 codes are three-letter country codes - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+- [ ] Validate that the `country_code` is [3 characters long](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 - [ ] Validate that `image_url` looks like a URL
 - [ ] Validate that `country` is unique
 - [ ] Validate that `image_url` is unique

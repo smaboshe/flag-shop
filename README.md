@@ -1,24 +1,46 @@
-# README
+# Flag Shop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my breakable toy. There might be many others like it but this one is mine.
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+This project is to help me with understanding test-driven development in Rails.
 
-* System dependencies
+## "Purpose"
 
-* Configuration
+The flag shop is a fictional shop that sells flags.
 
-* Database creation
+To start, a flag has a:
 
-* Database initialization
+- Country
+- Country Code
+- Price (in Kwacha)
+- A link to an image of the flag
 
-* How to run the test suite
+Other things to consider:
 
-* Services (job queues, cache servers, search engines, etc.)
+- Each country can only have one flag
+- Each country can only have one country code
+- Each image_url can only belong to one country
 
-* Deployment instructions
+## Todo
 
-* ...
+- [ ] Validate the presence of `price`
+- [ ] Validate the presence of `country`
+- [ ] Validate the presence of `country_code`
+- [ ] Validate the presence of `currency_code`
+- [ ] Validate the presence of `image_url`
+- [ ] Validate that `price` is a number
+- [ ] Validate that the `country_code` is 3 characters long (ISO 3166-1 alpha-3 codes are three-letter country codes - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+- [ ] Validate that `image_url` looks like a URL
+- [ ] Validate that `country` is unique
+- [ ] Validate that `image_url` is unique
+- [ ] Validate that `image_url` is unique
+- [ ] Add a homepage
+- [ ] Add SimpleCSS to the project
+- [ ] Test that if a flag exists, it is displayed on the homepage
+- [ ] Integrate payments to the project
+- [ ] Add an admin dashboard to the project
+- [ ] Implement feature flags to the project
+- [ ] Deploy to Heroku on push to main
+- [ ] Update to Ruby 3.1.2

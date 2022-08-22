@@ -36,11 +36,11 @@ Other things to consider:
 - [ ] Validate that `country` is unique
 - [ ] Validate that `image_url` is unique
 - [ ] Validate that `image_url` is unique
-- [ ] Add a homepage
+- [x] Add a homepage
 - [ ] Add SimpleCSS to the project
 - [ ] Test that if a flag exists, it is displayed on the homepage
 - [ ] Integrate payments to the project
 - [ ] Add an admin dashboard to the project
-- [ ] Implement feature flags to the project
+- [ ] Implement feature flags on the project
 - [ ] Deploy to Heroku on push to main
-- [ ] Update to Ruby 3.1.2
+- [x] Update to Ruby 3.1.2
